@@ -13,4 +13,11 @@ public class Tauler implements InputConnecta4 {
         }
         System.out.println("*************************************");
     }
+    public void inicialitzarTablero(){
+        for (int recV = 0; recV < tamVT; recV++) {
+            for (int recH = 0; recH < tamHT ; recH++) {
+                tablero[recV][recH]='-';
+            }
+        }
+    }
 }
