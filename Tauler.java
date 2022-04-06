@@ -1,14 +1,15 @@
-public class Tauler {
+public class Tauler implements InputConnecta4 {
     private final int tamVT = 7;
     private final int tamHT = 8;
-    private char[][] posFiches = new char[tamVT][tamHT];
+    private char[][] tablero = new char[tamVT][tamHT];
+
     public void mostrarTablero() {
         int recH;
         for (int recV = 0; recV < tamVT; recV++) {
-            for (recH = 0; recH < tamHT - 1; recH++) {
-                System.out.print("|" + posFiches[recV][recH] + "|");
+            for (recH = 0; recH < tamHT ; recH++) {
+                System.out.print("|" + tablero[recV][recH] + "|");
             }
-            System.out.println("|" + posFiches[recV][recH] + "|");
+            System.out.println("|" + tablero[recV][recH] + "|");
         }
         System.out.println("*************************************");
     }

@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aeca7a83-209e-49de-8d13-6c2124a6b649" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Ficha.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jugador.java" beforeDir="false" afterPath="$PROJECT_DIR$/Jugador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputConnecta4.java" beforeDir="false" afterPath="$PROJECT_DIR$/InputConnecta4.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Partida.java" beforeDir="false" afterPath="$PROJECT_DIR$/Partida.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tauler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tauler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -17,8 +17,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -36,6 +36,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -43,7 +44,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
-  <component name="RunManager" selected="Application.Partida">
+  <component name="RunManager" selected="Application.TestPartida">
     <configuration name="Partida" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Partida" />
       <module name="conecta4" />
@@ -58,8 +59,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TestPartida" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="TestPartida" />
+      <module name="conecta4" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TestPartida" />
         <item itemvalue="Application.Partida" />
         <item itemvalue="Application.Tauler" />
       </list>
@@ -77,7 +86,9 @@
       <workItem from="1648737535726" duration="6443000" />
       <workItem from="1648891283603" duration="2826000" />
       <workItem from="1649063528974" duration="3466000" />
-      <workItem from="1649085405310" duration="2310000" />
+      <workItem from="1649085405310" duration="15947000" />
+      <workItem from="1649174075250" duration="1237000" />
+      <workItem from="1649225778410" duration="872000" />
     </task>
     <servers />
   </component>

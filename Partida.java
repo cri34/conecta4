@@ -1,6 +1,4 @@
-public abstract class Partida implements  InputConnecta4{
+public  class Partida{
 
-    public static void main(String[] args) {
 
-    }
 }
