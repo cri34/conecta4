@@ -9,7 +9,7 @@ public class Tauler implements InputConnecta4 {
             for (recH = 0; recH < tamHT ; recH++) {
                 System.out.print("|" + tablero[recV][recH] + "|");
             }
-            System.out.println("|" + tablero[recV][recH] + "|");
+            System.out.println();
         }
         System.out.println("*************************************");
     }
