@@ -6,7 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="aeca7a83-209e-49de-8d13-6c2124a6b649" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/IniciarPartida.java" beforeDir="false" afterPath="$PROJECT_DIR$/IniciarPartida.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Partida.java" beforeDir="false" afterPath="$PROJECT_DIR$/Partida.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tauler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tauler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/conecta4/IniciarPartida.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/conecta4/IniciarPartida.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/conecta4/Tauler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/conecta4/Tauler.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +46,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
-  <component name="RunManager" selected="Application.IniciarPartida">
+  <component name="RunManager" selected="Application.Tauler">
     <configuration name="IniciarPartida" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="IniciarPartida" />
       <module name="conecta4" />
@@ -67,9 +70,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Tauler" />
         <item itemvalue="Application.IniciarPartida" />
         <item itemvalue="Application.Partida" />
-        <item itemvalue="Application.Tauler" />
       </list>
     </recent_temporary>
   </component>
@@ -88,7 +91,8 @@
       <workItem from="1649085405310" duration="15947000" />
       <workItem from="1649174075250" duration="1237000" />
       <workItem from="1649225778410" duration="10619000" />
-      <workItem from="1649254876164" duration="2084000" />
+      <workItem from="1649254876164" duration="19404000" />
+      <workItem from="1649312345857" duration="11870000" />
     </task>
     <servers />
   </component>
