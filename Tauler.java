@@ -54,4 +54,13 @@ public class Tauler implements InputConnecta4 {
         }
         return col;
     }
+    public void comenzarPartida() {
+        inicialitzarTablero();
+        while (torn != 57) {
+            insertarFicha();
+            mostrarTablero();
+        }
+    }
+
+
 }
