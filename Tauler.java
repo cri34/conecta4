@@ -66,14 +66,10 @@ public class Tauler implements InputConnecta4 {
     public int comprobarColumnaLibre(int posicio) {
         int col;
         for (col = tamVT - 1; col > 0; ) {
-            if (tablero[col][posicio] == 'x' || tablero[col][posicio] == 'o') {
-                col--;
-            } else {
+            if (tablero[col][posicio] == '-') {
                 break;
             }
-        }
-        if (tablero[col][posicio] == 'x' || tablero[col][posicio] == 'o') {
-            col -= 1;
+            col--;
         }
         return col;
     }
