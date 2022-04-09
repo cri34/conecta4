@@ -50,14 +50,14 @@ public class Tauler implements InputConnecta4 {
         char tipusFicha;
         if (comprobarColumnaLibre(posicio)) {
             tipusFicha = (torn % 2 == 0) ? 'x' : 'o';
-            mostrarInfoFicha(colLibre, posicio);
             tablero[colLibre][posicio] = tipusFicha;
+            mostrarInfoFicha(colLibre, posicio);
             torn++;
         }
     }
 
     public void mostrarInfoFicha(int numColLibre, int posicio) {
-        System.out.printf("ficha insertada en col: [%d] fila: [%d]'\n", numColLibre + 1, posicio + 1);
+        System.out.printf("ficha: '%c' insertada en col: [%d] fila: [%d] \n",tablero[colLibre][posicio], numColLibre + 1, posicio + 1);
     }
 
 
