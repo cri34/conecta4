@@ -1,12 +1,10 @@
 import java.util.InputMismatchException;
-
 public class Tauler implements InputConnecta4 {
     private final int tamVT = 7;
     private final int tamHT = 8;
     private char[][] tablero = new char[tamVT][tamHT];
     private int posicioV;
     private int posicioH;
-
     public void mostrarTablero() {
         int recH;
         for (int recV = 0; recV < tamVT; recV++) {
@@ -17,7 +15,6 @@ public class Tauler implements InputConnecta4 {
         }
         System.out.println("*************************************");
     }
-
     public void inicialitzarTablero() {
         for (int recV = 0; recV < tamVT; recV++) {
             for (int recH = 0; recH < tamHT; recH++) {
@@ -25,9 +22,7 @@ public class Tauler implements InputConnecta4 {
             }
         }
     }
-
     private int torn = 1;
-
     public int conseguirInputValid() {
         final int minTamHT = 1;
         int inJ;
@@ -45,26 +40,24 @@ public class Tauler implements InputConnecta4 {
         } while (true);
         return inJ;
     }
-
     public void insertarFicha() {
-         posicioH = conseguirInputValid() - 1;
+        posicioH = conseguirInputValid() - 1;
         char tipusFicha;
-        if (comprobarColumnaLibre(posicioH)) {
+        if (comprobarColumnaLibre()) {
             tipusFicha = (torn % 2 == 0) ? 'x' : 'o';
             tablero[posicioV][posicioH] = tipusFicha;
-            mostrarInfoFicha(posicioV, posicioH);
-            System.out.println("estado jugador: " + comprobaciones4enLinea(posicioV, posicioH));
+            mostrarInfoFicha();
+            System.out.println("estado jugador: " + comprobaciones4enLinea());
             torn++;
 
         }
     }
 
-    public void mostrarInfoFicha(int posicioV, int posicioH) {
+    public void mostrarInfoFicha() {
         System.out.printf("ficha: '%c' insertada en posicion Vertical: [%d] posicion Horitzontal: [%d] \n",tablero[posicioV][posicioH], posicioV + 1, posicioH+ 1);
     }
 
-
-    public boolean comprobarColumnaLibre(int posicioH) {
+    public boolean comprobarColumnaLibre() {
         for (posicioV = tamVT - 1; posicioV >= 0; --posicioV) {
             if (tablero[posicioV][posicioH] == '-') {
                 return true;
@@ -74,10 +67,10 @@ public class Tauler implements InputConnecta4 {
         return false;
     }
 
-    public boolean comprobaciones4enLinea(int posicioV, int posicioH) {
-        return comprobacionHorizontal(posicioV, posicioH) || comprobacionVertical(posicioV, posicioH);
+    public boolean comprobaciones4enLinea() {
+        return comprobacionHorizontal() || comprobacionVertical();
     }
-    private boolean comprobacionHorizontal(int posicioV, int posicioH) {
+    private boolean comprobacionHorizontal() {
         final char tipusFicha = tablero[posicioV][posicioH ];
         int contFichasCon = 0;
         final int fihasConNecesaries = 4;
@@ -94,7 +87,7 @@ public class Tauler implements InputConnecta4 {
         return false;
     }
 
-    private boolean comprobacionVertical(int posicioV, int posicioH) {
+    private boolean comprobacionVertical() {
         final char tipusFicha = tablero[posicioV][posicioH];
         int contFichasCon = 0;
         final int fihasConNecesaries = 4;
@@ -110,7 +103,6 @@ public class Tauler implements InputConnecta4 {
         }
         return false;
     }
-
     public void comenzarPartida() {
         inicialitzarTablero();
         while (torn != 57) {
@@ -118,6 +110,4 @@ public class Tauler implements InputConnecta4 {
             mostrarTablero();
         }
     }
-
-
 }
