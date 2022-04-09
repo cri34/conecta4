@@ -4,6 +4,7 @@ public class Tauler implements InputConnecta4 {
     private final int tamVT = 7;
     private final int tamHT = 8;
     private char[][] tablero = new char[tamVT][tamHT];
+    private static int colLibre;
 
     public void mostrarTablero() {
         int recH;
@@ -27,33 +28,30 @@ public class Tauler implements InputConnecta4 {
     private int torn = 1;
 
     public int conseguirInputValid() {
-        final int minTamHT =1;
+        final int minTamHT = 1;
         int inJ;
-        do{
+        do {
             try {
                 System.out.println("escribe la posicion horizontal para colocar la ficha en el tablero");
-                inJ=leerTeclado.nextInt();
-                if (inJ<=tamHT && inJ>=minTamHT){
+                inJ = leerTeclado.nextInt();
+                if (inJ <= tamHT && inJ >= minTamHT) {
                     break;
                 }
-            }catch (InputMismatchException e){
+            } catch (InputMismatchException e) {
                 leerTeclado.next();
             }
             System.out.println("¡ERROR!, inserta un numero valido [1-8]");
-        }while(true);
+        } while (true);
         return inJ;
     }
 
     public void insertarFicha() {
-        int posicio = conseguirInputValid()-1;
-        int numColLibre = comprobarColumnaLibre(posicio);
+        int posicio = conseguirInputValid() - 1;
         char tipusFicha;
-        if (numColLibre == -1) {
-            System.out.println("¡error!,columna llena, canvia de fila");
-        } else {
+        if (comprobarColumnaLibre(posicio)) {
             tipusFicha = (torn % 2 == 0) ? 'x' : 'o';
-            mostrarInfoFicha(numColLibre, posicio);
-            tablero[numColLibre][posicio] = tipusFicha;
+            mostrarInfoFicha(colLibre, posicio);
+            tablero[colLibre][posicio] = tipusFicha;
             torn++;
         }
     }
@@ -63,15 +61,14 @@ public class Tauler implements InputConnecta4 {
     }
 
 
-    public int comprobarColumnaLibre(int posicio) {
-        int col;
-        for (col = tamVT - 1; col > 0; ) {
-            if (tablero[col][posicio] == '-') {
-                break;
+    public boolean comprobarColumnaLibre(int posicio) {
+        for (colLibre = tamVT - 1; colLibre >= 0; --colLibre) {
+            if (tablero[colLibre][posicio] == '-') {
+                return true;
             }
-            col--;
         }
-        return col;
+        System.out.println("¡error!,columna llena, canvia de fila");
+        return false;
     }
 
     public void comenzarPartida() {
