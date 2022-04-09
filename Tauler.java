@@ -4,7 +4,8 @@ public class Tauler implements InputConnecta4 {
     private final int tamVT = 7;
     private final int tamHT = 8;
     private char[][] tablero = new char[tamVT][tamHT];
-    private static int colLibre;
+    private int posicioV;
+    private int posicioH;
 
     public void mostrarTablero() {
         int recH;
@@ -46,26 +47,26 @@ public class Tauler implements InputConnecta4 {
     }
 
     public void insertarFicha() {
-        int posicio = conseguirInputValid() - 1;
+         posicioH = conseguirInputValid() - 1;
         char tipusFicha;
-        if (comprobarColumnaLibre(posicio)) {
+        if (comprobarColumnaLibre(posicioH)) {
             tipusFicha = (torn % 2 == 0) ? 'x' : 'o';
-            tablero[colLibre][posicio] = tipusFicha;
-            mostrarInfoFicha(colLibre, posicio);
-            System.out.println("estado jugador: " + comprobaciones4enLinea(colLibre, posicio));
+            tablero[posicioV][posicioH] = tipusFicha;
+            mostrarInfoFicha(posicioV, posicioH);
+            System.out.println("estado jugador: " + comprobaciones4enLinea(posicioV, posicioH));
             torn++;
 
         }
     }
 
-    public void mostrarInfoFicha(int numColLibre, int posicio) {
-        System.out.printf("ficha: '%c' insertada en col: [%d] fila: [%d] \n",tablero[colLibre][posicio], numColLibre + 1, posicio + 1);
+    public void mostrarInfoFicha(int posicioV, int posicioH) {
+        System.out.printf("ficha: '%c' insertada en posicion Vertical: [%d] posicion Horitzontal: [%d] \n",tablero[posicioV][posicioH], posicioV + 1, posicioH+ 1);
     }
 
 
-    public boolean comprobarColumnaLibre(int posicio) {
-        for (colLibre = tamVT - 1; colLibre >= 0; --colLibre) {
-            if (tablero[colLibre][posicio] == '-') {
+    public boolean comprobarColumnaLibre(int posicioH) {
+        for (posicioV = tamVT - 1; posicioV >= 0; --posicioV) {
+            if (tablero[posicioV][posicioH] == '-') {
                 return true;
             }
         }
@@ -80,8 +81,8 @@ public class Tauler implements InputConnecta4 {
         final char tipusFicha = tablero[posicioV][posicioH ];
         int contFichasCon = 0;
         final int fihasConNecesaries = 4;
-        for (int fila = 0; fila < tamHT; fila++) {
-            if (tablero[posicioV][fila] == tipusFicha) {
+        for ( int recH = 0; recH < tamHT; recH++) {
+            if (tablero[posicioV][recH] == tipusFicha) {
                 contFichasCon++;
                 if (contFichasCon == fihasConNecesaries) {
                     return true;
@@ -97,8 +98,8 @@ public class Tauler implements InputConnecta4 {
         final char tipusFicha = tablero[posicioV][posicioH];
         int contFichasCon = 0;
         final int fihasConNecesaries = 4;
-        for (int col = 0; col < tamVT; col++) {
-            if (tablero[col][posicioH ] == tipusFicha) {
+        for (int recV = 0; recV < tamVT; recV++) {
+            if (tablero[recV][posicioH ] == tipusFicha) {
                 contFichasCon++;
                 if (contFichasCon == fihasConNecesaries) {
                     return true;
