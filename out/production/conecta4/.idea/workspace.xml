@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aeca7a83-209e-49de-8d13-6c2124a6b649" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/IniciarPartida.java" beforeDir="false" afterPath="$PROJECT_DIR$/IniciarPartida.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tauler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tauler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/conecta4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/conecta4/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/conecta4/Tauler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/conecta4/Tauler.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,6 +93,8 @@
       <workItem from="1649341925272" duration="8067000" />
       <workItem from="1649410989563" duration="1681000" />
       <workItem from="1649436487893" duration="8206000" />
+      <workItem from="1649497951490" duration="16844000" />
+      <workItem from="1649533246534" duration="2132000" />
     </task>
     <servers />
   </component>

@@ -52,7 +52,9 @@ public class Tauler implements InputConnecta4 {
             tipusFicha = (torn % 2 == 0) ? 'x' : 'o';
             tablero[colLibre][posicio] = tipusFicha;
             mostrarInfoFicha(colLibre, posicio);
+            System.out.println("estado jugador: " + comprobaciones4enLinea(colLibre, posicio));
             torn++;
+
         }
     }
 
@@ -68,6 +70,43 @@ public class Tauler implements InputConnecta4 {
             }
         }
         System.out.println("¡error!,columna llena, canvia de fila");
+        return false;
+    }
+
+    public boolean comprobaciones4enLinea(int posicioV, int posicioH) {
+        return comprobacionHorizontal(posicioV, posicioH) || comprobacionVertical(posicioV, posicioH);
+    }
+    private boolean comprobacionHorizontal(int posicioV, int posicioH) {
+        final char tipusFicha = tablero[posicioV][posicioH ];
+        int contFichasCon = 0;
+        final int fihasConNecesaries = 4;
+        for (int fila = 0; fila < tamHT; fila++) {
+            if (tablero[posicioV][fila] == tipusFicha) {
+                contFichasCon++;
+                if (contFichasCon == fihasConNecesaries) {
+                    return true;
+                }
+            } else {
+                contFichasCon = 0;
+            }
+        }
+        return false;
+    }
+
+    private boolean comprobacionVertical(int posicioV, int posicioH) {
+        final char tipusFicha = tablero[posicioV][posicioH];
+        int contFichasCon = 0;
+        final int fihasConNecesaries = 4;
+        for (int col = 0; col < tamVT; col++) {
+            if (tablero[col][posicioH ] == tipusFicha) {
+                contFichasCon++;
+                if (contFichasCon == fihasConNecesaries) {
+                    return true;
+                }
+            } else {
+                contFichasCon = 0;
+            }
+        }
         return false;
     }
 
