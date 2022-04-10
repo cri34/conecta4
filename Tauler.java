@@ -71,34 +71,31 @@ public class Tauler implements InputConnecta4 {
         return comprobacionHorizontal() || comprobacionVertical();
     }
     private boolean comprobacionHorizontal() {
-        final char tipusFicha = tablero[posicioV][posicioH ];
+        final char tipusFicha = tablero[posicioV][posicioH];
         int contFichasCon = 0;
-        final int fihasConNecesaries = 4;
-        for ( int recH = 0; recH < tamHT; recH++) {
-            if (tablero[posicioV][recH] == tipusFicha) {
-                contFichasCon++;
-                if (contFichasCon == fihasConNecesaries) {
-                    return true;
-                }
-            } else {
-                contFichasCon = 0;
+        final int fichasConNecesaries = 4;
+        int min = (posicioH - 3 < 0) ? 0 : posicioH - 3;
+        int max = (posicioH + 3 > tamHT - 1) ? tamHT - 1 : posicioH + 3;
+        for (int rec = min; rec <= max; rec++) {
+            contFichasCon = (tablero[posicioV][rec] == tipusFicha) ? ++contFichasCon : 0;
+            if (contFichasCon == fichasConNecesaries) {
+                return true;
             }
         }
         return false;
     }
 
+
     private boolean comprobacionVertical() {
         final char tipusFicha = tablero[posicioV][posicioH];
         int contFichasCon = 0;
-        final int fihasConNecesaries = 4;
-        for (int recV = 0; recV < tamVT; recV++) {
-            if (tablero[recV][posicioH ] == tipusFicha) {
-                contFichasCon++;
-                if (contFichasCon == fihasConNecesaries) {
-                    return true;
-                }
-            } else {
-                contFichasCon = 0;
+        final int fichasConNecesaries = 4;
+        int min = (posicioV - 3 < 0) ? 0 : posicioV - 3;
+        int max = (posicioV + 3 > tamVT - 1) ? tamVT - 1 : posicioV + 3;
+        for (int rec = min; rec <= max; rec++) {
+            contFichasCon = (tablero[rec][posicioH] == tipusFicha) ? ++contFichasCon : 0;
+            if (contFichasCon == fichasConNecesaries) {
+                return true;
             }
         }
         return false;
