@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="aeca7a83-209e-49de-8d13-6c2124a6b649" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/Tauler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tauler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/conecta4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/conecta4/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/conecta4/Tauler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/conecta4/Tauler.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +96,13 @@
       <workItem from="1649436487893" duration="8206000" />
       <workItem from="1649497951490" duration="16844000" />
       <workItem from="1649533246534" duration="6195000" />
-      <workItem from="1649581623939" duration="2631000" />
+      <workItem from="1649581623939" duration="29854000" />
+      <workItem from="1649669005229" duration="2884000" />
+      <workItem from="1649755800962" duration="8631000" />
+      <workItem from="1649830374173" duration="8545000" />
+      <workItem from="1649839299780" duration="117000" />
+      <workItem from="1649841722345" duration="2275000" />
+      <workItem from="1650182962921" duration="5358000" />
     </task>
     <servers />
   </component>
@@ -111,5 +119,16 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Tauler.java</url>
+          <line>124</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

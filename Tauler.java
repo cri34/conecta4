@@ -1,10 +1,13 @@
 import java.util.InputMismatchException;
+
 public class Tauler implements InputConnecta4 {
     private final int tamVT = 7;
     private final int tamHT = 8;
     private char[][] tablero = new char[tamVT][tamHT];
     private int posicioV;
     private int posicioH;
+    char tipusFicha;
+
     public void mostrarTablero() {
         int recH;
         for (int recV = 0; recV < tamVT; recV++) {
@@ -15,6 +18,7 @@ public class Tauler implements InputConnecta4 {
         }
         System.out.println("*************************************");
     }
+
     public void inicialitzarTablero() {
         for (int recV = 0; recV < tamVT; recV++) {
             for (int recH = 0; recH < tamHT; recH++) {
@@ -22,7 +26,9 @@ public class Tauler implements InputConnecta4 {
             }
         }
     }
+
     private int torn = 1;
+
     public int conseguirInputValid() {
         final int minTamHT = 1;
         int inJ;
@@ -40,9 +46,9 @@ public class Tauler implements InputConnecta4 {
         } while (true);
         return inJ;
     }
+
     public void insertarFicha() {
         posicioH = conseguirInputValid() - 1;
-        char tipusFicha;
         if (comprobarColumnaLibre()) {
             tipusFicha = (torn % 2 == 0) ? 'x' : 'o';
             tablero[posicioV][posicioH] = tipusFicha;
@@ -54,7 +60,7 @@ public class Tauler implements InputConnecta4 {
     }
 
     public void mostrarInfoFicha() {
-        System.out.printf("ficha: '%c' insertada en posicion Vertical: [%d] posicion Horitzontal: [%d] \n",tablero[posicioV][posicioH], posicioV + 1, posicioH+ 1);
+        System.out.printf("ficha: '%c' insertada en posicion Vertical: [%d] posicion Horitzontal: [%d] \n", tablero[posicioV][posicioH], posicioV + 1, posicioH + 1);
     }
 
     public boolean comprobarColumnaLibre() {
@@ -68,38 +74,45 @@ public class Tauler implements InputConnecta4 {
     }
 
     public boolean comprobaciones4enLinea() {
-        return comprobacionHorizontal() || comprobacionVertical();
-    }
-    private boolean comprobacionHorizontal() {
-        final char tipusFicha = tablero[posicioV][posicioH];
+
+        int[] dV = {0, 0, 0, 0};
+        int[] dH = {0, 0, 0, 0};
+        int indexDV = 0;
+        int indexDH = 0;
         int contFichasCon = 0;
+        int posV, posH;
         final int fichasConNecesaries = 4;
-        int min = (posicioH - 3 < 0) ? 0 : posicioH - 3;
-        int max = (posicioH + 3 > tamHT - 1) ? tamHT - 1 : posicioH + 3;
-        for (int rec = min; rec <= max; rec++) {
-            contFichasCon = (tablero[posicioV][rec] == tipusFicha) ? ++contFichasCon : 0;
-            if (contFichasCon == fichasConNecesaries) {
-                return true;
+        for (int rec = -3; rec <= 3; ) {
+            if (indexDV == 3) { dV[indexDV] = -rec;}
+            if (indexDH != 1) { dH[indexDH] = rec;}
+            if (indexDV != 0 && indexDV != 3) { dV[indexDV] = rec;}
+            posV = posicioV + dV[indexDV];
+            posH = posicioH + dH[indexDH];
+            if (dentroTablero(posV, posH)) {
+                contFichasCon = (tablero[posV][posH] == tipusFicha) ? ++contFichasCon : 0;
+                if (contFichasCon == fichasConNecesaries) {
+                    return true;
+                }
+            }
+            if (indexDV != 3 && rec == 3) {
+                rec = -3;
+                indexDV++;
+                indexDH = indexDV;
+                contFichasCon = 0;
+            } else {
+                rec++;
             }
         }
         return false;
     }
 
-
-    private boolean comprobacionVertical() {
-        final char tipusFicha = tablero[posicioV][posicioH];
-        int contFichasCon = 0;
-        final int fichasConNecesaries = 4;
-        int min = (posicioV - 3 < 0) ? 0 : posicioV - 3;
-        int max = (posicioV + 3 > tamVT - 1) ? tamVT - 1 : posicioV + 3;
-        for (int rec = min; rec <= max; rec++) {
-            contFichasCon = (tablero[rec][posicioH] == tipusFicha) ? ++contFichasCon : 0;
-            if (contFichasCon == fichasConNecesaries) {
-                return true;
-            }
-        }
-        return false;
+    public boolean dentroTablero(int posV, int posH) {
+        boolean rangoH = posH >= 0 && posH < tamHT;
+        boolean rangoV = posV >= 0 && posV < tamVT;
+        return rangoH && rangoV;
     }
+
+
     public void comenzarPartida() {
         inicialitzarTablero();
         while (torn != 57) {
