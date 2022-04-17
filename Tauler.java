@@ -83,9 +83,15 @@ public class Tauler implements InputConnecta4 {
         int posV, posH;
         final int fichasConNecesaries = 4;
         for (int rec = -3; rec <= 3; ) {
-            if (indexDV == 3) { dV[indexDV] = -rec;}
-            if (indexDH != 1) { dH[indexDH] = rec;}
-            if (indexDV != 0 && indexDV != 3) { dV[indexDV] = rec;}
+            if (indexDV == 3) {
+                dV[indexDV] = -rec;
+            }
+            if (indexDH != 1) {
+                dH[indexDH] = rec;
+            }
+            if (indexDV != 0 && indexDV != 3) {
+                dV[indexDV] = rec;
+            }
             posV = posicioV + dV[indexDV];
             posH = posicioH + dH[indexDH];
             if (dentroTablero(posV, posH)) {
@@ -112,10 +118,22 @@ public class Tauler implements InputConnecta4 {
         return rangoH && rangoV;
     }
 
+    public boolean continuaPartida() {
+        int tornMax=57;
+        if (torn == tornMax) {
+            System.out.println("PARTIDA EMPATADA");
+            return false;
+        }
+        if (comprobaciones4enLinea()) {
+            System.out.printf("PARTIDA GANADA POR '%c' en turno : %d", tablero[posicioV][posicioH],torn);
+            return false;
+        }
+        return true;
+    }
 
     public void comenzarPartida() {
         inicialitzarTablero();
-        while (torn != 57) {
+        while (continuaPartida()) {
             insertarFicha();
             mostrarTablero();
         }
