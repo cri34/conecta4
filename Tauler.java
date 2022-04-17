@@ -13,7 +13,12 @@ public class Tauler implements InputConnecta4 {
     public void setTamHT(int tamHT){
         this.tamHT=tamHT;
     }
-    
+    public void setPosicioV(int posicioV){
+        this.posicioV=posicioV;
+    }
+    public void setPosicioH(int posicioH){
+        this.posicioH=posicioH;
+    }
     public void mostrarTablero() {
         int ultNum1chifra = 9;
         String espacios="  ";
