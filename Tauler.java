@@ -53,7 +53,6 @@ public class Tauler implements InputConnecta4 {
             tipusFicha = (torn % 2 == 0) ? 'x' : 'o';
             tablero[posicioV][posicioH] = tipusFicha;
             mostrarInfoFicha();
-            System.out.println("estado jugador: " + comprobaciones4enLinea());
             torn++;
 
         }
