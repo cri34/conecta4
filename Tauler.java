@@ -27,7 +27,7 @@ public class Tauler implements InputConnecta4 {
         }
     }
 
-    private int torn = 1;
+    private int torn = 0;
 
     public int conseguirInputValid() {
         final int minTamHT = 1;
@@ -119,7 +119,7 @@ public class Tauler implements InputConnecta4 {
     }
 
     public boolean continuaPartida() {
-        int tornMax=57;
+        int tornMax=56;
         if (torn == tornMax) {
             System.out.println("PARTIDA EMPATADA");
             return false;
