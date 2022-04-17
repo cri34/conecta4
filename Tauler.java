@@ -52,14 +52,13 @@ public class Tauler implements InputConnecta4 {
         if (comprobarColumnaLibre()) {
             tipusFicha = (torn % 2 == 0) ? 'x' : 'o';
             tablero[posicioV][posicioH] = tipusFicha;
-            mostrarInfoFicha();
             torn++;
-
+            mostrarInfoFicha();
         }
     }
 
     public void mostrarInfoFicha() {
-        System.out.printf("ficha: '%c' insertada en posicion Vertical: [%d] posicion Horitzontal: [%d] \n", tablero[posicioV][posicioH], posicioV + 1, posicioH + 1);
+        System.out.printf("turno: %d ficha: '%c' insertada en posicion Vertical: [%d] posicion Horitzontal: [%d] \n", torn,tablero[posicioV][posicioH], posicioV + 1, posicioH + 1);
     }
 
     public boolean comprobarColumnaLibre() {
