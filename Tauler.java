@@ -1,13 +1,19 @@
 import java.util.InputMismatchException;
 
 public class Tauler implements InputConnecta4 {
-    private final int tamVT = 7;
-    private final int tamHT = 8;
-    private char[][] tablero = new char[tamVT][tamHT];
+    private int tamVT = 7;
+    private int tamHT = 8;
+    public char[][] tablero = new char[tamVT][tamHT];
     private int posicioV;
     private int posicioH;
     char tipusFicha;
-
+    public void setTamVT(int tamVT){
+        this.tamVT=tamVT;
+    }
+    public void setTamHT(int tamHT){
+        this.tamHT=tamHT;
+    }
+    
     public void mostrarTablero() {
         int ultNum1chifra = 9;
         String espacios="  ";
