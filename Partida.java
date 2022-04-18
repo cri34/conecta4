@@ -126,7 +126,7 @@ public  class Partida implements InputConnecta4{
             return false;
         }
         if (comprobaciones4enLinea()) {
-            System.out.printf("PARTIDA GANADA POR '%c' EN TURNO : %d", tablero[posicioV][posicioH],torn);
+            System.out.printf("PARTIDA GANADA POR '%c' EN TURNO : %d | POSICION VERTICAL [%d] POSICION HORIZONTAL [%d]", tablero[posicioV][posicioH],torn,posicioV+1,posicioH+1);
             return false;
         }
         return true;
