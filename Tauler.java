@@ -1,12 +1,12 @@
 import java.util.InputMismatchException;
 
 public class Tauler implements InputConnecta4 {
-    private int tamVT =7 ;
-    private int tamHT =8;
-    private char[][] tablero = new char[tamVT][tamHT];
+    private int tamVT ;
+    private int tamHT ;
+    private char[][] tablero;
     private int posicioV;
     private int posicioH;
-    char tipusFicha;
+    private char tipusFicha;
     public void setTamVT(int tamVT){
         this.tamVT=tamVT;
     }
@@ -43,7 +43,6 @@ public class Tauler implements InputConnecta4 {
         }
         System.out.println("************************************************************");
     }
-
     public void inicialitzarTablero() {
         for (int recV = 0; recV < tamVT; recV++) {
             for (int recH = 0; recH < tamHT; recH++) {
@@ -53,7 +52,6 @@ public class Tauler implements InputConnecta4 {
     }
 
     private int torn = 0;
-
     public int conseguirInputValid() {
         final int minTamHT = 1;
         int inJ;
@@ -71,7 +69,6 @@ public class Tauler implements InputConnecta4 {
         } while (true);
         return inJ;
     }
-
     public void insertarFicha() {
         posicioH = conseguirInputValid() - 1;
         if (comprobarColumnaLibre()) {
@@ -90,6 +87,7 @@ public class Tauler implements InputConnecta4 {
         for (posicioV = tamVT - 1; posicioV >= 0; --posicioV) {
             if (tablero[posicioV][posicioH] == '-') {
                 return true;
+
             }
         }
         System.out.println("¡error!,columna llena, canvia de fila");
