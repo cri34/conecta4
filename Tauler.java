@@ -1,22 +1,14 @@
 import java.util.InputMismatchException;
 
-public class Tauler implements InputConnecta4 {
+public class Tauler{
     private int tamVT ;
     private int tamHT ;
     private char[][] tablero;
-    private int posicioV;
-    private int posicioH;
     public void setTamVT(int tamVT){
         this.tamVT=tamVT;
     }
     public void setTamHT(int tamHT){
         this.tamHT=tamHT;
-    }
-    public void setPosicioV(int posicioV){
-        this.posicioV=posicioV;
-    }
-    public void setPosicioH(int posicioH){
-        this.posicioH=posicioH;
     }
     public void setTablero(char [][] tablero){
         this.tablero=tablero;
