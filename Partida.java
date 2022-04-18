@@ -121,7 +121,7 @@ public  class Partida implements InputConnecta4{
     }
 
     public boolean continuaPartida() {
-        int tornMax=56;
+        int tornMax=tamHT*tamVT;
         if (torn == tornMax) {
             System.out.println("PARTIDA EMPATADA");
             return false;
