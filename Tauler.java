@@ -1,5 +1,3 @@
-import java.util.InputMismatchException;
-
 public class Tauler{
     private int tamVT ;
     private int tamHT ;

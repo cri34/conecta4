@@ -3,19 +3,38 @@ import java.util.InputMismatchException;
 public  class Partida implements InputConnecta4{
     Tauler t= new Tauler();
     public Partida(){
+        selecTamTablero();
         t.setTamVT(tamVT);
         t.setTamHT(tamHT);
         tablero= new char[tamVT][tamHT];
         t.setTablero(tablero);
     }
-    private int tamVT=7;
-    private int tamHT=8;
+    private int tamVT;
+    private int tamHT;
     private char[][] tablero;
     private int posicioV;
     private int posicioH;
     private char tipusFicha;
-
     private int torn = 0;
+
+    public void selecTamTablero(){
+        int tamMinim=4;
+        int tamMaxim=99;
+        do {
+            try {
+                System.out.println("escribe el tamaño vertical del tablero ");
+                tamVT = leerTeclado.nextInt();
+                System.out.println("escribe el tamaño horizontal del tablero ");
+                tamHT = leerTeclado.nextInt();
+                if (tamHT>= tamMinim && tamVT>= tamMinim && tamHT<=tamMaxim && tamVT<=tamMaxim) {
+                    break;
+                }
+            } catch (InputMismatchException e) {
+                leerTeclado.next();
+            }
+            System.out.printf("¡ERROR!, tamaño insertado invalido, minimo aceptado: %d Vertical y %d de Horizontal | maximo aceptado: %d Horizontal y %d Vertical\n",tamMinim,tamMinim,tamMaxim,tamMaxim);
+        } while (true);
+    }
     public int conseguirInputValid() {
         final int minTamHT = 1;
         int inJ;
