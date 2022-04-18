@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aeca7a83-209e-49de-8d13-6c2124a6b649" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Partida.java" beforeDir="false" afterPath="$PROJECT_DIR$/Partida.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tauler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tauler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/conecta4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/conecta4/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/conecta4/Partida.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/conecta4/Partida.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/conecta4/Tauler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/conecta4/Tauler.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -33,17 +34,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)"
+  }
+}]]></component>
   <component name="RunManager" selected="Application.IniciarPartida">
     <configuration name="IniciarPartida" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="IniciarPartida" />
@@ -102,7 +101,8 @@
       <workItem from="1649830374173" duration="8545000" />
       <workItem from="1649839299780" duration="117000" />
       <workItem from="1649841722345" duration="2275000" />
-      <workItem from="1650182962921" duration="5358000" />
+      <workItem from="1650182962921" duration="26010000" />
+      <workItem from="1650279281914" duration="378000" />
     </task>
     <servers />
   </component>
@@ -119,16 +119,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Tauler.java</url>
-          <line>124</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
