@@ -48,7 +48,7 @@ public  class Partida implements InputConnecta4{
             } catch (InputMismatchException e) {
                 leerTeclado.next();
             }
-            System.out.println("¡ERROR!, inserta un numero valido [1-8]");
+            System.out.printf("¡ERROR!, inserta un numero valido, Min[%d] y Max[%d] \n",minTamHT,tamHT);
         } while (true);
         return inJ;
     }
@@ -66,7 +66,6 @@ public  class Partida implements InputConnecta4{
         for (posicioV = tamVT - 1; posicioV >= 0; --posicioV) {
             if (tablero[posicioV][posicioH] == '-') {
                 return true;
-
             }
         }
         System.out.println("¡error!,columna llena, canvia de fila");
@@ -127,7 +126,7 @@ public  class Partida implements InputConnecta4{
             return false;
         }
         if (comprobaciones4enLinea()) {
-            System.out.printf("PARTIDA GANADA POR '%c' en turno : %d", tablero[posicioV][posicioH],torn);
+            System.out.printf("PARTIDA GANADA POR '%c' EN TURNO : %d", tablero[posicioV][posicioH],torn);
             return false;
         }
         return true;
